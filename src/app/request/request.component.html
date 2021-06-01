@@ -1,0 +1,42 @@
+<!-- <button (click)="goBack()">go back</button> -->
+<div fxLayout="column" fxLayoutGap="4px" fxLayoutAlign="center center">
+    <form name="form" (ngSubmit)="f.form.valid && submitRequests()" #f="ngForm" fxShow="true" fxFlex fxLayout="column"
+        fxLayoutAlign="center center" fxLayoutGap="4px">
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Prayer Request For</mat-label>
+                <input matInput placeholder="Enter the name of the person" name="for" [(ngModel)]="model.for"
+                    #for="ngModel">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea  matInput placeholder="Add the description about the request" type="description" name="description"
+                 [(ngModel)]="model.description" #description="ngModel">
+                </textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Requested By</mat-label>
+                <input matInput placeholder="Enter your name" type="by" name="by" [(ngModel)]="model.by"
+                    #by="ngModel">
+            </mat-form-field>
+        </div>
+        <div fxFlex>
+            <button class="btn btn-info height_40" type="submit" [disabled]="checkLoginDis() || loading" fxFlex="98">
+                <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
+                Submit
+            </button>
+        </div>
+    </form>
+<div>
+    <p>
+        After you have submitted your requests, 
+    you can go back to the <a [routerLink]="'/'">Main page</a> to verify your requests being updated correctly or not!
+    </p>
+    
+</div>
+</div>

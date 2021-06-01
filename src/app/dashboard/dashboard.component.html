@@ -1,0 +1,17 @@
+<div  fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.lt-lg="column" 
+fxLayoutGap="10px" fxLayoutGap.lt-lg="14" >
+    
+      <div class="card" fxFlex="30" style="width: 90%;"   *ngFor="let request of requests">
+        <div class="card-header">
+            Pray for {{request._for}}
+        </div>
+        <div class="card-body text-center">
+          <p class="card-text">{{request.description}}</p>
+        </div>
+        <div class="card-footer">
+            Requested by: {{request.by}}
+        </div>
+      </div>
+      
+
+</div>
