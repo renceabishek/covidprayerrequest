@@ -1,17 +1,28 @@
-<div  fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.lt-lg="column" 
-fxLayoutGap="10px" fxLayoutGap.lt-lg="14" >
-    
-      <div class="card" fxFlex="30" style="width: 90%;"   *ngFor="let request of requests">
-        <div class="card-header">
-            Pray for {{request._for}}
-        </div>
-        <div class="card-body text-center">
-          <p class="card-text">{{request.description}}</p>
-        </div>
-        <div class="card-footer">
-            Requested by: {{request.by}}
-        </div>
-      </div>
+<div style="text-align: center;">
+    (Total no.of prayer requests : {{totalrequest}} )
+</div>
+<br>
+<div  fxLayout="row wrap" fxLayoutAlign="space-evenly center" fxLayoutGap.lt-lg="20px" fxLayout.lt-lg="column"
+        >
+        
+
+        <div class="card border border-success shadow-0" fxFlex="30" style="width: 90%;margin: 5px;" 
+        *ngFor="let request of requests" data-aos="fade-up" data-aos-duration="6200" >
+            
+            <div class="card-header bg-transparent border-success text-center">
+                Pray for {{request._for}}
+            </div>
+
+            <div class="card-body text-center text-success">
+              <p class="card-text">{{request.description}}</p>
+              
+              <p style="float: right;margin-bottom: -10px;">
+                <span style="font-size: 10px;">Requested by: </span><span style="font-size: 12px;">{{request.by}}</span> </p>
+            </div>
+
+          </div>      
       
 
 </div>
+
+<!-- fxFlex="30" style="width: 90%;" -->

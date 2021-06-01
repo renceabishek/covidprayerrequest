@@ -1,26 +1,26 @@
 <!-- <button (click)="goBack()">go back</button> -->
 <div fxLayout="column" fxLayoutGap="4px" fxLayoutAlign="center center">
-    <form name="form" (ngSubmit)="f.form.valid && submitRequests()" #f="ngForm" fxShow="true" fxFlex fxLayout="column"
-        fxLayoutAlign="center center" fxLayoutGap="4px">
+    <form name="form" (ngSubmit)="f.form.valid && submitRequests()" #f="ngForm" fxShow="true" style="width: 95%;"  fxLayout="column"
+        fxLayoutAlign="center" fxLayoutGap="4px">
 
-        <div>
-            <mat-form-field appearance="outline">
-                <mat-label>Prayer Request For</mat-label>
+        <div >
+            <mat-form-field appearance="outline" fxFlex="98">
+                <mat-label>Prayer Request for (Enter the Affected Person Name)</mat-label>
                 <input matInput placeholder="Enter the name of the person" name="for" [(ngModel)]="model.for"
                     #for="ngModel">
             </mat-form-field>
         </div>
-        <div>
-            <mat-form-field appearance="outline">
-                <mat-label>Description</mat-label>
+        <div >
+            <mat-form-field appearance="outline" fxFlex="98">
+                <mat-label>Enter the Situation</mat-label>
                 <textarea  matInput placeholder="Add the description about the request" type="description" name="description"
                  [(ngModel)]="model.description" #description="ngModel">
                 </textarea>
             </mat-form-field>
         </div>
-        <div>
-            <mat-form-field appearance="outline">
-                <mat-label>Requested By</mat-label>
+        <div >
+            <mat-form-field appearance="outline" fxFlex="98">
+                <mat-label>Requested By (Enter your Name)</mat-label>
                 <input matInput placeholder="Enter your name" type="by" name="by" [(ngModel)]="model.by"
                     #by="ngModel">
             </mat-form-field>
