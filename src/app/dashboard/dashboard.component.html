@@ -1,13 +1,18 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" 
+[fullScreen] = "true"><p style="color: white"> Loading... </ngx-spinner>
+
+
 <div style="text-align: center;">
-    (Total no.of prayer requests : {{totalrequest}} )
+    {{totalrequest}}
 </div>
 <br>
-<div  fxLayout="row wrap" fxLayoutAlign="space-evenly center" fxLayoutGap.lt-lg="20px" fxLayout.lt-lg="column"
-        >
-        
 
+<div  fxLayout="row wrap"  fxLayoutAlign="space-evenly center" 
+     fxLayout.lt-lg="column">
+
+        
         <div class="card border border-success shadow-0" fxFlex="30" style="width: 90%;margin: 5px;" 
-        *ngFor="let request of requests" data-aos="fade-up" data-aos-duration="6200" >
+        *ngFor="let request of requests" >
             
             <div class="card-header bg-transparent border-success text-center">
                 Pray for {{request._for}}
@@ -24,5 +29,6 @@
       
 
 </div>
+
 
 <!-- fxFlex="30" style="width: 90%;" -->

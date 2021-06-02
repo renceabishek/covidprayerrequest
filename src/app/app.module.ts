@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 
@@ -38,7 +39,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     FlexLayoutModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxSpinnerModule
 
   ],
   providers: [],
