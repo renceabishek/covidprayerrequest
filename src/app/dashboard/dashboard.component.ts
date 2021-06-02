@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
       this.totalrequest = "(Total no.of prayer requests : "+data.length+" )"
       this.spinner.hide();
     }, err=> {
-      alert("There is a problem, Inform to abishek!")
+      alert("Try Reload once again")
       this.spinner.hide();
     }
     )

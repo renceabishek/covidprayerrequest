@@ -29,7 +29,7 @@ export class RequestComponent implements OnInit {
       _for: this.model.for,
       description: this.model.description,
       by: this.model.by,
-      date: this.model.date
+      date: new Date().toString()
     }
 
     this.dataService.createPrayerRequest(this.requests)
