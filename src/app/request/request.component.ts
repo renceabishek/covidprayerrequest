@@ -29,7 +29,8 @@ export class RequestComponent implements OnInit {
       _for: this.model.for,
       description: this.model.description,
       by: this.model.by,
-      date: new Date().toString()
+      date: new Date().toString(),
+      status: "wait"
     }
 
     this.dataService.createPrayerRequest(this.requests)

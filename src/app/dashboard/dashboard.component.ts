@@ -24,7 +24,14 @@ export class DashboardComponent implements OnInit {
     
     this.dataService.fetchPrayerRequests().subscribe(data=> {
       this.requests =  data
-      this.totalrequest = "(Total no.of prayer requests : "+data.length+" )"
+      var yesvalue:number = 0;
+      data.forEach(f=> {
+        if(f.status==='yes') {
+          yesvalue=yesvalue+1
+        }
+      })
+
+      this.totalrequest = "(Total no.of prayer requests : "+(data.length-yesvalue)+" Recovered: "+yesvalue+" )"
       this.spinner.hide();
     }, err=> {
       alert("Try Reload once again")

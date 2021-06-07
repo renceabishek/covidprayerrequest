@@ -5,20 +5,35 @@
 <div style="text-align: center;">
     {{totalrequest}}
 </div>
+<div style="text-align: center;">
+  <br>
+  [<b> Note: </b> <span style="color: white;" class="bg-success">Marking Green consider as Recovered.</span> If any of your friends recovered, 
+  Let Abishek or Mrs.Ranjini aunty to know to mark it as recovered here. ]
+</div>
 <br>
 
 <div  fxLayout="row wrap"  fxLayoutAlign="space-evenly center" 
      fxLayout.lt-lg="column">
 
         
-        <div class="card border border-success shadow-0" fxFlex="30" style="width: 90%;margin: 5px;" 
+        <div  class="card border border-dark shadow-0" fxFlex="30" 
+        style="width: 90%;margin: 5px;" 
         *ngFor="let request of requests" >
             
-            <div class="card-header bg-transparent border-success text-center">
+            <div  class="card-header bg-transparent border-success text-center">
                 Pray for {{request._for}}
             </div>
 
-            <div class="card-body text-center text-success">
+
+            <div *ngIf="request.status === 'wait'" class="card-body text-center " style="color: darkcyan;">
+              <p class="card-text">{{request.description}}</p>
+              
+              <p style="float: right;margin-bottom: -10px;">
+                <span style="font-size: 10px;">Requested by: </span><span style="font-size: 12px;">{{request.by}}</span> </p>
+            </div>
+
+
+            <div *ngIf="request.status === 'yes'" class="card-body text-center bg-success" style="color: white;">
               <p class="card-text">{{request.description}}</p>
               
               <p style="float: right;margin-bottom: -10px;">
