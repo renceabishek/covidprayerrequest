@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
       this.requests =  data
       var yesvalue:number = 0;
       data.forEach(f=> {
-        if(f.status==='yes') {
+        if(f.status==='YES') {
           yesvalue=yesvalue+1
         }
       })
